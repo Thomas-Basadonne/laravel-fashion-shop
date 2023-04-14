@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('shoes', function (Blueprint $table) {
             $table->id();
+            $table->string('marca');
+            $table->string('modello');
+            $table->string('colore');          
+            $table->float('taglia', 3, 1);
+            $table->float('prezzo', 5, 2);
             $table->timestamps();
         });
     }
