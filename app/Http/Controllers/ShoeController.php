@@ -47,7 +47,7 @@ class ShoeController extends Controller
      */
     public function show(Shoe $shoe)
     {
-        //
+        return view('admin.shoes.show', compact('shoes'));
     }
 
     /**

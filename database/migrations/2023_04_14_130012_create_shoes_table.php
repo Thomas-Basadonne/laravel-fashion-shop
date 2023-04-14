@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('shoes', function (Blueprint $table) {
             $table->id();
             $table->string('marca');
+            $table->string('image')->nullable();
             $table->string('modello');
             $table->string('colore');          
             $table->float('taglia', 3, 1);

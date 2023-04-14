@@ -25,6 +25,7 @@ class ShoeSeeder extends Seeder
 
         $shoe->marca= $faker -> randomElement (['Adidas','Nike','Geox', 'Fila', 'Converse']);
         $shoe->modello= $faker -> word();
+        $shoe->image= $faker ->imageUrl(640, 480, 'animals', true);
         $shoe->colore= $faker -> colorName();
         $shoe->taglia= $faker -> randomFloat(1, 34, 46);
         $shoe->prezzo= $faker ->  randomFloat(2, 10, 300);
