@@ -12,6 +12,7 @@
       <th scope="col">Colore</th>
       <th scope="col">Taglia</th>
       <th scope="col">Prezzo</th>
+      <th scope="col">Actions</th>
       
     </tr>
   </thead>
@@ -24,7 +25,10 @@
       <td>{{ $shoe->colore}}</td>
       <td>{{ $shoe->taglia}}</td>
       <td>{{ $shoe->prezzo}}</td>
+      <td> <a href="{{route('shoes.show', $shoes)}}" class="btn btn-primary">Details</a></td>
+       
     </tr>
+    
     @empty
     @endforelse
   </tbody>
