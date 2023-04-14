@@ -12,8 +12,12 @@
 </head>
 
 <body>
+@include('partials.navbar')
+
     @yield('title')
     @yield('content')
+
+
 </body>
 
 </html>
