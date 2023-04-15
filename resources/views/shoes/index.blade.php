@@ -25,7 +25,7 @@
       <td>{{ $shoe->colore}}</td>
       <td>{{ $shoe->taglia}}</td>
       <td>{{ $shoe->prezzo}}</td>
-      <td> <a href="{{route('shoes.show', $shoes)}}" class="btn btn-primary">Details</a></td>
+      <td> <a href="{{route('shoes.show', $shoe)}}" class="btn btn-primary">Details</a></td>
        
     </tr>
     
