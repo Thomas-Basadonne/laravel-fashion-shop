@@ -25,7 +25,8 @@ class ShoeController extends Controller
      */
     public function create()
     {
-        //
+        $shoe = new Shoe;
+        return view('shoes.create', compact('shoe'));
     }
 
     /**
@@ -36,7 +37,13 @@ class ShoeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        
+        $shoe = new Shoe;
+
+        $shoe->fill($data);
+        $shoe->save();
+        return redirect()->route('admin.projects.show', $shoe);
     }
 
     /**

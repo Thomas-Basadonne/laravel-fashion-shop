@@ -13,11 +13,10 @@
 
 <body>
 @include('partials.navbar')
-
-    @yield('title')
-    @yield('content')
-
-
+<main class="container">
+  @yield('title')
+  @yield('content')
+</main>
 </body>
 
 </html>
