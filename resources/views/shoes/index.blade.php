@@ -25,9 +25,10 @@
       <td>{{ $shoe->colore}}</td>
       <td>{{ $shoe->taglia}}</td>
       <td>{{ $shoe->prezzo}}</td>
-      <td> <a href="{{route('shoes.show', $shoes)}}" class="btn btn-primary">Details</a></td>
-       
-    </tr>
+      <td><a href="{{ route('shoes.show', $shoe)}}">
+        <i class="bi bi-eye mx-2"></i></a>
+      </td>  
+    </tr>    
     
     @empty
     @endforelse

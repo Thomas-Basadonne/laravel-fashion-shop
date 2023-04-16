@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Laravel 9 + Bootstrap Template</title>
+  
+   {{-- BS Icons --}}
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
   {{-- Includiamo gli assets con la direttiva @vite --}}
   @vite('resources/js/app.js')
@@ -14,8 +17,12 @@
 <body>
 @include('partials.navbar')
 
-    @yield('title')
-    @yield('content')
+    <div class="container">
+       <h1>@yield('title')</h1>
+      @yield('content')
+
+    </div>
+   
 
 
 </body>
