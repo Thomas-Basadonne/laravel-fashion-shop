@@ -18,7 +18,6 @@
       <th scope="col">Taglia</th>
       <th scope="col">Prezzo</th>
       <th scope="col">Actions</th>
-      
     </tr>
   </thead>
   <tbody>
@@ -31,13 +30,12 @@
       <td>{{ $shoe->taglia}}</td>
       <td>{{ $shoe->prezzo}}</td>
       <td> 
-        <a href="{{route('shoes.show', $shoe)}}" class="btn btn-primary">
-          Details
+        <a href="{{route('shoes.show', $shoe)}}">
+          <i class="bi bi-eye-fill"></i>
         </a>
-      </td>
-      <td> 
+
         <a href="{{ route('shoes.edit', $shoe) }}">
-          <i class="bi bi-pencil-fill text-primary"></i>
+          <i class="bi bi-pencil-fill text-primary ms-2"></i>
         </a>
       </td>
     </tr>
