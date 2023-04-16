@@ -18,6 +18,8 @@
   @yield('title')
   @yield('content')
 </main>
+
+@yield('modals')
 </body>
 
 </html>

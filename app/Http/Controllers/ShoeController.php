@@ -91,7 +91,8 @@ class ShoeController extends Controller
      */
     public function destroy(Shoe $shoe)
     {
-        //
+        $shoe->delete();
+        return redirect()->route('shoes.index'); 
     }
 
     private function validation($data) 
