@@ -10,10 +10,11 @@
   {{-- Includiamo gli assets con la direttiva @vite --}}
   @vite('resources/js/app.js')
 </head>
-
+   @yield('cdn')
 <body>
 @include('partials.navbar')
 <main class="container">
+ 
   @yield('title')
   @yield('content')
 </main>

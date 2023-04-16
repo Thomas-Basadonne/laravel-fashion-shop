@@ -2,6 +2,11 @@
 
 @section('title', 'Index')
 
+@section('cdn')
+{{-- Bootstrap Icons --}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+@endsection
+
 @section('content')
   <table class="table">
   <thead>
@@ -25,8 +30,16 @@
       <td>{{ $shoe->colore}}</td>
       <td>{{ $shoe->taglia}}</td>
       <td>{{ $shoe->prezzo}}</td>
-      <td> <a href="{{route('shoes.show', $shoe)}}" class="btn btn-primary">Details</a></td>
-       
+      <td> 
+        <a href="{{route('shoes.show', $shoe)}}" class="btn btn-primary">
+          Details
+        </a>
+      </td>
+      <td> 
+        <a href="{{ route('shoes.edit', $shoe) }}">
+          <i class="bi bi-pencil-fill text-primary"></i>
+        </a>
+      </td>
     </tr>
     
     @empty
