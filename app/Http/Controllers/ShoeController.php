@@ -13,11 +13,24 @@ class ShoeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+  public function index(Request $request)
     {
         $shoes = Shoe::paginate(10);
+         if($request->has('term')){
+            $term = $request->get('term');
+            $shoes = Shoe::where('marca', 'LIKE', "%$term%")
+            ->orWhere('modello', 'LIKE', "%$term%")
+            ->orWhere('colore', 'LIKE', "%$term%")
+            ->orWhere('taglia', 'LIKE', "%$term%")
+
+            ->paginate(10)->withQueryString();
+            
+        } else {
+            $shoes = Shoe::paginate(10);
+        }
         return view('shoes.index', compact('shoes'));
     }
+
 
     /**
      * Show the form for creating a new resource.

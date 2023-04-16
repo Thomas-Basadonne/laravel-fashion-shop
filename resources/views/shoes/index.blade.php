@@ -8,6 +8,13 @@
 @endsection
 
 @section('content')
+
+  {{-- BARRA DI RICERCA --}}
+   <form class="d-flex my-4" role="search">
+        <input class="form-control me-2" type="search" name="term" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form> 
+
   <table class="table">
   <thead>
     <tr>
