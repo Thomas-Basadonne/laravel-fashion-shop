@@ -1,21 +1,19 @@
-<nav class="navbar navbar-expand-lg bg-light container-fluid">
+<nav class="navbar navbar-expand-lg bg-light container mb-4">
   <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="d-flex align-items-center">
+      <img src="{{ asset('img/logo.png') }}" alt="logo" class="me-2">
+      <h3>Shoes Shop</h3>
+    </div>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ route('shoes.index') }}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link active" aria-current="page" href="{{ route('shoes.index') }}">Lista prodotti</a>
         </li>
       </ul>
-      <div class="col-9 d-flex justify-content-end">
+    </div>  
+    <div class=" d-flex justify-content-end">
     <a type="button" href="{{ route('shoes.create') }}" class="btn btn-primary">
-      Create new item
+      Aggiungi prodotto
     </a>
   </div>
 </nav>
