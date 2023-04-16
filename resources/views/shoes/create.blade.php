@@ -61,10 +61,20 @@ method="POST" class="row gy-3">
   @enderror
 </div>
 
-
+<div class="col-6">
+  @if($errors->any())
+<div class="alert alert-danger">
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+  </ul>
+</div>
+@endif
+</div>
 
 <div class="col-12 d-flex">
-  <button type="submit" class="btn btn-outline-success col-6">Save</button>
+  <button type="submit" class="btn btn-outline-primary col-6">Save</button>
 </div>
 
 </form>

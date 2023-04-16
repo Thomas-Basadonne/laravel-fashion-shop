@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Shoe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ShoeController extends Controller
 {
@@ -37,13 +38,13 @@ class ShoeController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
+        $data = $this->validation($request->all());
         
         $shoe = new Shoe;
 
         $shoe->fill($data);
         $shoe->save();
-        return redirect()->route('admin.projects.show', $shoe);
+        return redirect()->route('shoes.show', $shoe);
     }
 
     /**
@@ -90,4 +91,40 @@ class ShoeController extends Controller
     {
         //
     }
+
+    private function validation($data) 
+    {
+        $validator = Validator::make(
+            $data,
+            [
+            'marca' => 'required|string|max:50',
+            'modello' => 'required|string',
+            'image' => 'nullable|string',
+            'colore' => 'required|string',
+            'taglia' => 'nullable|decimal:2',
+            'prezzo' => 'required|decimal:2',  
+        ],
+        [
+            'marca.required' => 'la marca è obbligatoria',
+            'marca.string' => 'la marca deve essere una stringa',
+            'marca.max' => 'la marca deve avere al massimo 50 catteri',
+
+            'modello.required' => 'il modello è obbligatorio',
+            'modello.string' => 'il modello deve essere una stringa',
+
+            'image.string' => 'l\' immagine deve essere una stringa',
+
+            'colore.required' => 'il colore è obbligatorio',
+            'colore.string' => 'il colore deve essere una stringa',
+
+            'taglia.decimal' => 'la taglia deve essere un numero con 2 decimali dopo la virgola',
+
+            'prezzo.required' => 'il prezzo è obbligatorio',
+            'prezzo.decimal' => 'il prezzo deve essere un numero con 2 decimali dopo la virgola',
+
+
+        ])->validate();
+
+        return $validator;
+    }   
 }
