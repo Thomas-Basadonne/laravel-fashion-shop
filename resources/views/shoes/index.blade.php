@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Index')
+@section('title')
+
+<h1 class="fs-2 text-center py-2 mb-3 fw-bold">Elenco Scarpe</h1>
+@endsection
 
 @section('cdn')
 {{-- Bootstrap Icons --}}
@@ -8,9 +11,9 @@
 @endsection
 
 @section('content')
-  <table class="table">
+  <table class="table table-info">
   <thead>
-    <tr>
+    <tr class="text-center">
       <th scope="col">ID</th>
       <th scope="col">Marca</th>
       <th scope="col">Modello</th>
@@ -20,16 +23,16 @@
       <th scope="col">Actions</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="table-group-divider">
     @forelse($shoes as $shoe)
-    <tr>
+    <tr class="table-primary text-center">
       <th scope="row">{{ $shoe->id}}</th>
       <td>{{ $shoe->marca}}</td>
       <td>{{ $shoe->modello}}</td>
       <td>{{ $shoe->colore}}</td>
       <td>{{ $shoe->taglia}}</td>
       <td>{{ $shoe->prezzo}}</td>
-      <td> 
+      <td class="text-center"> 
         <a href="{{route('shoes.show', $shoe)}}">
           <i class="bi bi-eye-fill"></i>
         </a>
@@ -38,7 +41,7 @@
           <i class="bi bi-pencil-fill text-primary ms-2"></i>
         </a>
 
-        <button class="bi bi-trash3-fill text-danger btn-trash" data-bs-toggle="modal" data-bs-target="#delete-modal-{{ $shoe->id }}"></button>
+        <button class="bi bi-trash3-fill text-danger btn-trash border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#delete-modal-{{ $shoe->id }}"></button>
       </td>
       </td>
     </tr>
@@ -48,7 +51,9 @@
   </tbody>
 </table>
 
-{{ $shoes->links() }}
+<div class="d-flex justify-content-center my-4">
+  {{ $shoes->links() }}
+</div>
 @endsection
 
 @section('modals')
