@@ -80,7 +80,7 @@ class ShoeController extends Controller
     {
         $data = $this->validation($request->all());
         $shoe->update($data);
-        return redirect()->route('records.show', $shoe);
+        return redirect()->route('shoes.show', $shoe);
     }
 
     /**
