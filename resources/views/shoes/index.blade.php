@@ -43,7 +43,7 @@
           <i class="bi bi-eye-fill"></i>
         </a>
 
-        <a>
+        <a href="{{route('shoes.edit', $shoe)}}">
           <i class="bi bi-pencil-fill text-primary ms-2"></i>
         </a>
 
