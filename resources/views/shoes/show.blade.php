@@ -28,4 +28,8 @@
     </ul>
   </div>
 </div>
+
+<a href="{{ route('shoes.index') }}" class="btn btn-outline-primary  my-5 mx-3">
+  Torna alla lista
+</a>
 @endsection
