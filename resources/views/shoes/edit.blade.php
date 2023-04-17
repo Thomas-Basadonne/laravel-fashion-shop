@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
+<<<<<<< HEAD
+@section('title', 'Modifca Prodotto')
+=======
 @section('title')
-  <h1 class="fs-2 text-center py-2 mb-3 fw-bold">Modifca Scarpa</h1>
+  <h1 class="fs-2 text-center py-2 mb-3 fw-bold">Modifica Scarpa</h1>
 @endsection
+>>>>>>> homecard-feature
 
 @section('cdn')
 {{-- Bootstrap Icons --}}
@@ -10,7 +14,7 @@
 @endsection
 
 @section('content')
-<div class="">
+
   <form action="{{ route('shoes.update', $shoe) }}" method="POST" class="row gy-3">
 
   @csrf
@@ -96,5 +100,5 @@
   </div>
 
   </form>
-</div>
+
 @endsection

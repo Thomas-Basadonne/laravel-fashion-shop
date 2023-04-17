@@ -1,11 +1,9 @@
 @extends('layouts.app')
 
-@section('title')
-  <h1 class="fs-2 text-center py-2 mb-3 fw-bold">Aggiungi una nuova Scarpa</h1>
-@endsection
+@section('title', 'Nuovo Prodotto')
 
 @section('content')
-  
+
 <form 
 action="{{ route('shoes.store') }}" 
 enctype="multipart/form-data" 
