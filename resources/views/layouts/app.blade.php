@@ -23,7 +23,7 @@
       @yield('content')
     </div>
     
-
+    @yield('modals')
 </body>
 
 </html>
