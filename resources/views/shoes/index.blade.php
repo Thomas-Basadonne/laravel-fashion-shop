@@ -26,7 +26,7 @@
       <th scope="col">Colore</th>
       <th scope="col">Taglia</th>
       <th scope="col">Prezzo</th>
-      <th scope="col">Actions</th>
+      <th scope="col">Actions   </th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
