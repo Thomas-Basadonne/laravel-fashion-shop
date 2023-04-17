@@ -1,10 +1,6 @@
 @extends('layouts.app')
 
-<<<<<<< HEAD
-@section('title', 'Nuovo Prodotto')
-=======
 @section('title')
->>>>>>> homecard-feature
 
 @section('content')
   <h1 class="my-3">Inserisci i nuovi dettagli :</h1>
