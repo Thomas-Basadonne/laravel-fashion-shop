@@ -11,12 +11,17 @@
 @endsection
 
 @section('content')
-  {{-- BARRA DI RICERCA --}}
-  <form class="d-flex my-4" role="search">
-    <input class="form-control me-2" type="search" name="term" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-primary" type="submit">Search</button>
-</form> 
 
+  <div class="d-flex align-items-center justify-content-between">
+    {{-- search bar --}}
+    <form class="d-flex my-4" role="search">
+        <input class="form-control me-2" type="search" name="term" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form>  
+    {{-- add new item btn --}}
+    <a class="btn btn-primary my-3" type="button" href="{{ route('shoes.create') }}">Aggiungi prodotto</a>
+  </div>
+   
   <table class="table">
   <thead>
     <tr class="text-center">

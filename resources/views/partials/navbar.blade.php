@@ -11,9 +11,5 @@
         </li>
       </ul>
     </div>  
-    <div class=" d-flex justify-content-end">
-    <a type="button" href="{{ route('shoes.create') }}" class="btn btn-primary">
-      Aggiungi prodotto
-    </a>
-  </div>
+   
 </nav>
