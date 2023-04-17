@@ -15,11 +15,14 @@
 </head>
    @yield('cdn')
 <body>
-@include('partials.navbar')
+    @include('partials.navbar')
 
-    @yield('title')
-    @yield('content')
 
+    <div class="container">
+      @yield('title')
+      @yield('content')
+    </div>
+    
 
 </body>
 

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light container mb-4">
+<nav class="navbar navbar-expand-lg bg-light mb-4">
   <div class="container d-flex align-items-center">
     <div class="d-flex align-items-end me-2">
       <img src="{{ asset('img/logo.png') }}" alt="logo" class="me-2">
