@@ -38,12 +38,6 @@
       <td>{{ $shoe->colore}}</td>
       <td>{{ $shoe->taglia}}</td>
       <td>{{ $shoe->prezzo}}</td>
-<<<<<<< HEAD
-      <td><a href="{{ route('shoes.show', $shoe)}}">
-        <i class="bi bi-eye mx-2"></i></a>
-      </td>  
-    </tr>    
-=======
       <td class="text-center"> 
         <a href="{{route('shoes.show', $shoe)}}">
           <i class="bi bi-eye-fill"></i>
@@ -57,7 +51,6 @@
       </td>
       </td>
     </tr>
->>>>>>> 2355cb80fe961ea5ef1ed7b63d6a5c9ed974fe1b
     
     @empty
     @endforelse
