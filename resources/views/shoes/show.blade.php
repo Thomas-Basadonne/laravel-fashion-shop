@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
-@section('title')
-  <h1 class="fs-2 text-center py-2 mb-3 fw-bold">Dettaglio Scarpa</h1>
-@endsection
+@section('title', 'Dettaglio Prodotto')
 
 @section('content')
 <div class="card">
