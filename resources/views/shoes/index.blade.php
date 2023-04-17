@@ -25,7 +25,7 @@
       <th scope="col">Modello</th>
       <th scope="col">Colore</th>
       <th scope="col">Taglia</th>
-      <th scope="col">Prezzo</th>
+      <th scope="col">Prezzo €</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -43,7 +43,7 @@
           <i class="bi bi-eye-fill"></i>
         </a>
 
-        <a href="{{ route('shoes.edit', $shoe) }}">
+        <a>
           <i class="bi bi-pencil-fill text-primary ms-2"></i>
         </a>
 
