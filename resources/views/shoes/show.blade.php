@@ -3,7 +3,7 @@
 @section('title', 'Dettaglio Prodotto')
 
 @section('content')
-  <div class="card">
+  <div class="card w-50 mx-auto mt-3">
   <img src="{{ $shoe->image}}" class="card-img-top" alt="...">
   <div class="card-body">
     <h3 class="card-title fw-bold text-primary">Informazioni della scarpa N. {{$shoe->id}}</h3>
